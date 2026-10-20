@@ -398,8 +398,8 @@ def pulse(cx, cy, *, r=3.5, color=RED, dur=2.2) -> str:
 def hero() -> None:
     c = Card("hero", 440, "Auvendra",
              "Auvendra: AI automation, integration and systems design. "
-             "I turn slow, manual processes into systems that run themselves. "
-             "Based in Lithuania, AI-directed development, open to work.")
+             "I like making things easier. Especially the repetitive stuff. "
+             "Based in Lithuania, building with AI, open to work.")
 
     size, fs = 440, 6
     cols, rows = round(size / (fs * ADV)), round(size / (fs * 1.2))
@@ -421,14 +421,14 @@ def hero() -> None:
           f'<rect x="{x}" y="174" width="34" height="2" fill="{RED}" class="up" style="{d(.9)}"/>',
           c.text(x + 48, 180, "AI AUTOMATION · INTEGRATION · SYSTEMS", size=12, fill=MID, weight=700,
                  spacing=2, cls="up", style=d(.9)),
-          c.text(x, 238, "I turn slow, manual processes", size=20, fill=LIGHT, cls="up", style=d(1.1)),
-          c.text(x, 268, "into systems that run themselves.", size=20, fill=LIGHT, cls="up", style=d(1.2)),
+          c.text(x, 238, "I like making things easier.", size=20, fill=LIGHT, cls="up", style=d(1.1)),
+          c.text(x, 268, "Especially the repetitive stuff.", size=20, fill=LIGHT, cls="up", style=d(1.2)),
           f'<g class="up" style="{d(1.4)}">'
-          + typing(c, x, 320, [("spec it.", WHITE), ("build it.", WHITE), ("break it.", RED), ("ship it.", WHITE)],
+          + typing(c, x, 320, [("explain it.", WHITE), ("build it.", WHITE), ("test it.", WHITE), ("fix it.", RED)],
                    size=16) + "</g>",
           f'<line x1="{x}" y1="356" x2="952" y2="356" stroke="{LINE}" class="up" style="{d(1.5)}"/>')
 
-    fields = [(x, "BASE", "Lithuania · EET"), (x + 146, "MODE", "AI-directed development"),
+    fields = [(x, "BASE", "Lithuania · EET"), (x + 146, "MODE", "building with AI"),
               (x + 346, "STATUS", "open to work")]
     for i, (fx, k, v) in enumerate(fields):
         g = [c.text(fx, 384, k, size=10.5, fill=MUTED, weight=700, spacing=2.4)]
@@ -442,23 +442,23 @@ def hero() -> None:
 
 def method() -> None:
     c = Card("method", 334, "How I work",
-             "How I work: map the process, spec the behavior, build with AI, break it with edge cases, "
-             "ship it with approvals and measured results. Steps two to four repeat until it holds.")
+             "How I work: find what takes too much time, explain exactly what I want, build with AI, "
+             "test it and explain what needs fixing, then put it to use and keep improving it.")
     c.add(c.label(56, 64, "HOW I WORK"),
-          c.text(944, 64, "behavior first · code second", size=12, fill=MUTED, anchor="end"),
-          c.text(54, 108, "From a process that wastes hours to a system that holds.", size=21, fill=WHITE, weight=200))
+          c.text(944, 64, "describe it · test it · fix it", size=12, fill=MUTED, anchor="end"),
+          c.text(54, 108, "I work out what I want, then keep fixing it until it works.", size=21, fill=WHITE, weight=200))
 
     xs, y = [120, 310, 500, 690, 880], 186
-    steps = [("01", "MAP", ["find the process", "quietly eating hours.", "count what it costs."]),
-             ("02", "SPEC", ["numbered requirements.", "expected behavior.", "what must never happen."]),
-             ("03", "BUILD", ["AI implements.", "I direct, review and", "question every choice."]),
-             ("04", "BREAK", ["edge cases. bad input.", "failure modes.", "actual vs. intended."]),
-             ("05", "SHIP", ["human approval gates.", "logs you can read.", "hours saved, measured."])]
+    steps = [("01", "FIND", ["what keeps taking", "too much time?", "start there."]),
+             ("02", "EXPLAIN", ["what should it do?", "what goes where?", "write it all down."]),
+             ("03", "BUILD", ["AI writes the code.", "I give directions", "and check the result."]),
+             ("04", "TEST", ["try it properly.", "find what breaks.", "explain the fix."]),
+             ("05", "USE", ["put it to use.", "see what's annoying.", "keep improving it."])]
 
-    # iterate loop: BREAK back to SPEC
+    # loop from TEST back to EXPLAIN
     c.add(f'<path d="M{xs[3]},{y - 10} C{xs[3]},{y - 44} {xs[1]},{y - 44} {xs[1]},{y - 10}" fill="none" stroke="#3a3a3a" class="ants"/>',
           f'<rect x="{500 - 104}" y="{y - 45}" width="208" height="18" fill="{BG}"/>',
-          c.text(500, y - 32, "↩ iterate until it holds", size=11.5, fill=MUTED, anchor="middle"))
+          c.text(500, y - 32, "↩ fix it and try again", size=11.5, fill=MUTED, anchor="middle"))
 
     cycle, travel = 6.5, 0.82
     c.defs.append('<filter id="glow" x="-200%" y="-200%" width="500%" height="500%">'
@@ -488,9 +488,9 @@ def method() -> None:
 def roles() -> None:
     roles = [("Automation", "Engineer"), ("Integration", "Engineer"), ("Applied AI", "Engineer"),
              ("Forward-Deployed", "/ Solutions Eng."), ("Solutions", "Architect")]
-    c = Card("roles", 212, "Target roles",
-             "Target roles: " + ", then ".join(" ".join(r) for r in roles) + ".")
-    c.add(c.label(56, 64, "TARGET ROLES"))
+    c = Card("roles", 212, "Where I'm heading",
+             "Where I'm heading: " + ", then ".join(" ".join(r) for r in roles) + ".")
+    c.add(c.label(56, 64, "WHERE I'M HEADING"))
     xs, ry = [120, 310, 500, 690, 880], 120
     c.add(f'<line x1="{xs[0]}" y1="{ry}" x2="{xs[-1]}" y2="{ry}" stroke="{RAIL}"/>')
     for i, (x, (a, b)) in enumerate(zip(xs, roles)):
@@ -535,15 +535,59 @@ def footer() -> None:
                    focus=(x + 180, 196), reach=(214, 226), ascii_fade=(x + 90, x + 6),
                    reveal=(0.2, 1.8), image_delay=1.4))
 
-    c.add(c.label(56, 64, "EOF"),
+    c.add(c.label(56, 64, "A NOTE"),
           c.text(52, 152, "“This world is cruel.", size=30, fill=WHITE, weight=200, italic=True, cls="up", style="animation-delay:.4s"),
           c.text(52, 196, " It’s also very beautiful.”", size=30, fill=WHITE, weight=200, italic=True, cls="up", style="animation-delay:.6s"),
           f'<rect x="58" y="226" width="34" height="2" fill="{RED}" class="up" style="animation-delay:.8s"/>',
           c.text(104, 232, "MIKASA ACKERMAN", size=11.5, fill=MUTED, weight=700, spacing=2.6, cls="up", style="animation-delay:.8s"),
-          c.rich(58, 306, [("spec it.  build it.  ", MUTED), ("break it.", RED), ("  ship it.", MUTED)],
+          c.rich(58, 306, [("try it.  find the bug.  ", MUTED), ("fix it.", RED), ("  try again.", MUTED)],
                  size=13.5, cls="up", style="animation-delay:1s"),
           c.text(58, 332, "auvendra · lithuania · 2026", size=11, fill="#5a5a5a", spacing=2, cls="up", style="animation-delay:1.1s"))
     c.save()
+
+
+def divider() -> None:
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} 32" width="{W}" height="32">
+<defs>
+<linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" y1="16" x2="{W}" y2="16">
+<stop offset="0" stop-color="#fff" stop-opacity="0"/>
+<stop offset=".25" stop-color="#fff" stop-opacity=".35"/>
+<stop offset=".5" stop-color="#fff"/>
+<stop offset=".75" stop-color="#fff" stop-opacity=".35"/>
+<stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<path d="M0 16H{W}" fill="none" stroke="url(#fade)" stroke-width="1.5"/>
+</svg>
+'''
+    (OUT / "divider.svg").write_text(svg, encoding="utf-8")
+    print("assets/divider.svg")
+
+
+def project_icons() -> None:
+    icons = {
+        "bot": ("Discord bot", '<rect x="7" y="10" width="18" height="15" rx="4"/>'
+                '<path d="M16 6v4M4 16v5m24-5v5M12 21h8"/>'
+                '<circle cx="12" cy="16" r="1"/><circle cx="20" cy="16" r="1"/>'),
+        "website": ("Website", '<circle cx="16" cy="16" r="10"/>'
+                    '<ellipse cx="16" cy="16" rx="4" ry="10"/>'
+                    '<path d="M6 16h20M8 10h16M8 22h16"/>'),
+        "transcript": ("Transcript exporter", '<rect x="6" y="8" width="20" height="16" rx="3"/>'
+                       '<path d="m12 11 5 3-5 3zM11 20h10"/>'),
+        "math": ("Math game", '<rect x="7" y="5" width="18" height="22" rx="3"/>'
+                 '<path d="M11 10h10M11 16h4m-2-2v4m5-2h3m-10 6h4m3-1h3m-3 2h3"/>'),
+        "community": ("Community", '<circle cx="16" cy="12" r="3.5"/>'
+                      '<path d="M9 25v-2a7 7 0 0 1 14 0v2M6 16a3 3 0 0 1 0-6'
+                      'm20 6a3 3 0 0 0 0-6M4 24v-2a5 5 0 0 1 3-4m21 6v-2a5 5 0 0 0-3-4"/>'),
+    }
+    for name, (title, paths) in icons.items():
+        svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">\n'
+               f'<title>{esc(title)}</title>\n'
+               f'<rect x=".5" y=".5" width="31" height="31" rx="7" fill="{BG}" stroke="{RAIL}"/>\n'
+               f'<g fill="none" stroke="{WHITE}" stroke-width="1.5" stroke-linecap="round" '
+               f'stroke-linejoin="round">{paths}</g>\n</svg>\n')
+        (OUT / f"icon-{name}.svg").write_text(svg, encoding="utf-8")
+        print(f"assets/icon-{name}.svg")
 
 
 if __name__ == "__main__":
@@ -552,3 +596,5 @@ if __name__ == "__main__":
     method()
     roles()
     footer()
+    divider()
+    project_icons()

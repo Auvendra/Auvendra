@@ -1,48 +1,72 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Auvendra: AI automation, integration and systems. I turn slow, manual processes into systems that run themselves. Based in Lithuania, AI-directed development, open to work.">
+  <img src="assets/hero.svg" width="100%" alt="Auvendra: AI automation, integration and systems. I like making things easier. Especially the repetitive stuff. Based in Lithuania, building with AI, open to work.">
 </p>
 
 ### › whoami
 
-I like fixing the boring parts of how a business runs. A lot of office work is people copying data from one system to another or putting together the same report every week, and most of it can be automated.
+I like making things easier. If something is repetitive, slow or just annoying to use, I'll usually end up trying to fix it.
 
-What I'm good at is working out how a system should behave. I write down exactly what it needs to do, then test it and keep correcting it until it actually works that way. I build with AI tools, so the AI writes most of the code while I handle the requirements, testing and fixes. I'm learning Python, SQL and APIs so I can read and judge that code myself.
+I build with AI. I explain what I want in detail: what each part should do, where things should go and what should happen when something goes wrong. Then I use it, find the bugs and keep going back until it behaves how I wanted. AI writes most of the code; I handle the directions, testing and figuring out what's wrong.
 
-I'm aiming for a job in automation and integration, working with tools like n8n and AI agents.
+I'm still learning Python, SQL and APIs. I want to get into automation and integration and build things that save people doing the same work over and over.
 
 <br>
 
 <p align="center">
-  <img src="assets/method.svg" width="100%" alt="How I work: 01 map the process quietly eating hours; 02 spec numbered requirements, expected behavior and what must never happen; 03 build, where AI implements and I direct and question every choice; 04 break it with edge cases, bad input and failure modes; 05 ship with human approval gates, readable logs and measured hours saved. Steps 02 to 04 repeat until it holds.">
+  <img src="assets/method.svg" width="100%" alt="How I work: find what takes too much time, explain exactly what I want, build with AI, test it and explain what needs fixing, then put it to use and keep improving it.">
 </p>
 
-### › principles
+### › how I think
 
 ```text
-BEHAVIOR BEFORE CODE    Define what it must do, and what it must never do.
-EDGE CASES ARE THE JOB  Test until it breaks. Write down exactly why.
-BORING IS A BUG         If a person copies data between two screens, automate it.
-HUMANS HOLD THE KEYS    AI acts, people approve. Every automation gets an off switch.
-SPEAK IN EUROS          Hours saved and errors avoided, not "AI-powered".
+Explain exactly what it should do.
+Try it. Find what breaks. Explain what's wrong.
+Fix it and check again.
+If it keeps needing manual work, make it easier.
 ```
 
 <br>
 
 <p align="center">
-  <img src="assets/roles.svg" width="100%" alt="Target roles: Automation Engineer, Integration Engineer, Applied AI Engineer, Forward-Deployed or Solutions Engineer, then Solutions Architect.">
+  <img src="assets/roles.svg" width="100%" alt="Where I'm heading: Automation Engineer, Integration Engineer, Applied AI Engineer, Forward-Deployed or Solutions Engineer, then Solutions Architect.">
 </p>
 
 ### › contact
 
-**Open to** automation, integration, applied AI, forward-deployed and solutions roles, and to freelance work on any process that eats hours every week.
+**Open to** automation, integration and applied AI roles, or freelance work on something you're tired of doing manually.
 
-<!-- Add your direct links here, e.g.:
-[LinkedIn](https://www.linkedin.com/in/your-handle) · [Email](mailto:you@example.com)
--->
-**[→ Start a conversation](https://github.com/Auvendra/Auvendra/issues/new?title=Hello%20Auvendra&body=What%20process%20are%20you%20trying%20to%20fix%3F)** and tell me which process you'd like gone.
+**[→ Get in touch](https://github.com/Auvendra/Auvendra/issues/new?title=Hello%20Auvendra&body=What%20are%20you%20trying%20to%20make%20easier%3F)** and tell me what you're trying to make easier.
 
 <br>
 
 <p align="center">
   <img src="assets/mikasa.svg" width="100%" alt="Mikasa Ackerman in her red scarf, a black-and-white manga portrait dissolving into ASCII, beside her line: This world is cruel. It's also very beautiful.">
 </p>
+
+<br>
+
+<p align="center">
+  <img src="assets/divider.svg" width="100%" height="32" alt="">
+</p>
+
+### › things I've worked on
+
+#### <img src="assets/icon-bot.svg" width="24" height="24" alt=""> Doom Discord Bot
+
+A bot for our ARK tribe. It tracks activity, runs votes and timers, handles invites and roles, and saves us doing it all by hand.
+
+#### <img src="assets/icon-website.svg" width="24" height="24" alt=""> [Doomtribe · doomtribe.lol](https://doomtribe.lol)
+
+Our tribe's website. Strats, clips, build templates, calculators and role sign-ups in one place, with different access for members, allies and admins.
+
+#### <img src="assets/icon-transcript.svg" width="24" height="24" alt=""> YouTube Transcript Exporter
+
+Paste a YouTube link and it copies the full captions to your clipboard. You can keep the timestamps or leave them out, and save the text to a file.
+
+#### <img src="assets/icon-math.svg" width="24" height="24" alt=""> [Mafs :3](https://github.com/Auvendra/CodeAcademy/blob/main/Exam.py)
+
+A little Python/PyQt5 math game from my CodeAcademy work. Random addition and multiplication questions, feedback on your answers and five chances to reveal an answer if you get stuck.
+
+#### <img src="assets/icon-community.svg" width="24" height="24" alt=""> OnlyUD
+
+I owned and ran it on my own, with no admins. Community management, support, feature requests, testing and bug reports all came to me.
