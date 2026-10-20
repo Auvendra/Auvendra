@@ -56,7 +56,7 @@ If it keeps needing manual work, make it easier.
 </p>
 
 <p align="center">
-  <a href="https://doomtribe.lol"><img src="assets/project-doomtribe.svg" width="100%" alt="Doomtribe, live at doomtribe.lol: our tribe's invite-only website. Strats, clips, build templates, calculators and role sign-ups in one place, with separate access for members, allies and admins. I designed it, built it with AI and tested it."></a>
+  <a href="https://doomtribe.lol"><img src="assets/project-doomtribe.svg" width="100%" alt="Doomtribe, live at doomtribe.lol: a tribe's invite-only website. Strats, clips, build templates, calculators and role sign-ups in one place, with separate access for members, allies and admins. I designed it, built it with AI and tested it."></a>
 </p>
 
 <p align="center">

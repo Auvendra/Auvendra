@@ -698,7 +698,7 @@ PROJECTS = [
          facts=[("MY PART", "designed · built with AI · tested"), ("FOR", "an ARK tribe")],
          panel=bot_panel),
     dict(name="doomtribe", kind="WEBSITE", title="Doomtribe", tagline="THE WHOLE TRIBE, ONE PLACE",
-         desc="Our tribe's website, and it's invite-only. Strats, clips, build templates, calculators and "
+         desc="A tribe's website, and it's invite-only. Strats, clips, build templates, calculators and "
               "role sign-ups all live in one place instead of getting lost in Discord. Members, allies "
               "and admins each get their own level of access, so everyone sees what they need.",
          facts=[("MY PART", "designed · built with AI · tested"), ("LIVE", "doomtribe.lol ↗")],
