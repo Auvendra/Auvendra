@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 334" width="1000" height="334" role="img" aria-labelledby="t d">
+<title id="t">How I work</title>
+<desc id="d">How I work: map the process, spec the behavior, build with AI, break it with edge cases, ship it with approvals and measured results. Steps two to four repeat until it holds.</desc>
+<defs>
+<style>@font-face{font-family:J;font-style:normal;font-weight:200;src:url(data:font/woff2;base64,d09GMgABAAAAAAV0AA4AAAAACogAAAUiAAJN0wAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwqBmAAgQQRCAqKRIg5ATYCJAMoCygABCAFhBwHIBtiCCOSUM6MAH91YBuitkO9CBMU0ZJSsxRN3W1t3DisA1k3N/2UIfKh5IZ9xVoN4sCj4UGamWIOon7u3bsk/7fvCsiy40GBIiCX2ESYEtgaUWNap2goz5pt1jhyySoTtmlKp1J6Ft8gX/eDiMpzL8kk40GrUJVrXK9goTMVfS3nqut9tR6RULtJID9O8vkvD9AJCEtN5/+Y6f6ibLbxWic0xOjATKt83jzdwPoiLSrACvTwAPkUhpf4e4HPhQBZAIAiCHlSEMBRpY+UAXJ4jEx8gH8BAIbYYhjBePl73NkB3ZCASb5OgWsC0PjNBhhSy2UBNEYKgEImF2Zh1cEDwKc6E/rPHxAMUo0jaIu+wNVJn62ABxRBEH5XqRwBlCmEkEGdWiSOX0hc0hjjTCjxF3hJMbyRv5d9Ro1aKZNKxKKEC4Mg/8oFW2h5C0AJIB8Obe8NBSmkeufoWnkT0FVwFdarMKciszRnUE6+nV7SWVRQm5NrQTZZGi5neaEkMjOJfIwq99QsIerkASOJibj4ISSQIyMSjrs3WTyEHLJGe4T/3uoJMT81tE8aYXNPG2SlBbX6mWxYwALT96Jl3me1ZqfLDpyYH85mKBf2fEvVWf0kAEOW6unMKak9xEQtguOB8fx7tItVM44JhDItrjO4eW4yYY+vWfJLdPROfHcVC+ard1sv1zWeEL6YKafCwBOLseK02pLl71rTFnNfPgVbyJne0JRv6iptZOpc9sxGVdygbGp8EkPoi9cN/8wtLl4kWi2ZCafdE17sFHKFUIRqAMLAORmZy6Y83ThtehfZMBwiaERndnpd5vGo6621PZPUUiLriYabPS2UBDRz8XHnTmcy7rQnAsAI82SYBGXkxE6cYVCJDM+FwJgIgHJaT8y+z+6JazvVLa8ZtRG+gNY76ubxElJB7CIIViomZdQ+iqRBNVeMd290x3mnI5ZwuA0Qo5WwhaoNwywsonyJlVYSlBLFKJYEwRewdIeqrUvLBc1JGCAIhVBMKQkfGEuyDFZwXvh3ww4OPSgExJBOuaC119AhzGqicliTkBYdlOwbwvbrZx+6r5Omg6oc8QS3nntQOOh0ewdKMeR2kmakUpqsSDEgcOoFtN5WtXQ1bHqXuvUuvsNzPohJmm6JTHxeOMmCyUOg4y7T2mmxBhwNsGHRTClkKB8oTOvRIBikPzSJWk7VDNs7enaRNDPxRyFdal0j62YcEN6ub2w5UUXrsqcVopm0HpU79TrgRWlC4t8h3LEJbvok/LQ+0DBgnRBUsocTLg/0ECQrElMs8bobVzQB5toGC8XLlaigmHMyy7Hb6oqZSCEUSpZ3Ogar0ZnybOknlj+lnJgJrp5SP7tFNtuyfoBYicyfbKaKnlNlwMEBTAk2v8vRPzw2bF8vV4HwRwXINy283wLXAP//56fKUrRaFTAJpORtj6p2ItAqOTH3Is7fja2iWAEenKBKxPNeJzNr51cJ8xYQwFaVe4HLVosVImVkAtx4J6dodJkskO87GQH9r07FkdPoIz5auvpc+vGSJhgpLChktH4a1d/N/ei/An+knN9oEEnPCUsYZWbxb4AXq//F8iL8vHnMQo0xWghvJFo6LO+NRksapVOdOkFh1M+M4VHLixdXV1Lh74KyWxleMx9hvNH/lYr2/bVafkFjxHBGalSrSb1mXeSgrhIb1+QJjJx2SsPI2n65Svu12xrA9YiVF2LS0TFyrAa12u+gmb5NjRa+wXoMr8dPIgCUX+P8AQ==) format('woff2')}@font-face{font-family:J;font-style:normal;font-weight:400;src:url(data:font/woff2;base64,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) format('woff2')}@font-face{font-family:J;font-style:normal;font-weight:700;src:url(data:font/woff2;base64,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) format('woff2')}
+text{font-family:J,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.art{font-size:var(--fs);white-space:pre}
+.rv{animation:rv .9s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes rv{from{opacity:0}}
+.up{animation:up 1.1s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.blink{animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.ants{stroke-dasharray:3 5;animation:ants 1.2s linear infinite}
+@keyframes ants{to{stroke-dashoffset:-16}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<clipPath id="card"><rect width="1000" height="334" rx="14"/></clipPath>
+<filter id="grain" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch"/>
+<feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .075 0 0 0 0"/>
+</filter>
+<radialGradient id="vig" cx=".5" cy=".45" r=".75">
+<stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/>
+</radialGradient>
+<filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g clip-path="url(#card)">
+<rect width="1000" height="334" fill="#0a0a0a"/>
+<g class="" style=""><rect x="56" y="56" width="7" height="7" fill="#c1121f"/><text x="74" y="64" font-size="12" font-weight="700" letter-spacing="3" fill="#6e6e6e">HOW I WORK</text></g>
+<text x="944" y="64" font-size="12" text-anchor="end" fill="#6e6e6e">behavior first · code second</text>
+<text x="54" y="108" font-size="21" font-weight="200" fill="#f3f3f3">From a process that wastes hours to a system that holds.</text>
+<path d="M690,176 C690,142 310,142 310,176" fill="none" stroke="#3a3a3a" class="ants"/>
+<path d="M306,170 L310,176 L314,170" fill="none" stroke="#3a3a3a"/>
+<rect x="396" y="141" width="208" height="18" fill="#0a0a0a"/>
+<text x="500" y="154" font-size="11.5" text-anchor="middle" fill="#6e6e6e">↩ iterate until it holds</text>
+<line x1="120" y1="186" x2="880" y2="186" stroke="#2a2a2a"/>
+<circle cx="120" cy="186" r="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.4"><animate attributeName="stroke" dur="6.5s" repeatCount="indefinite" keyTimes="0;.14;1" values="#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<circle cx="120" cy="186" r="2" fill="#3a3a3a"><animate attributeName="fill" dur="6.5s" repeatCount="indefinite" keyTimes="0;.14;1" values="#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<text x="120" y="224" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle" xml:space="preserve"><tspan fill="#c1121f">01  </tspan><tspan fill="#f3f3f3">MAP</tspan></text>
+<text x="120" y="254" font-size="12.5" text-anchor="middle" fill="#949494">find the process</text>
+<text x="120" y="274" font-size="12.5" text-anchor="middle" fill="#949494">quietly eating hours.</text>
+<text x="120" y="294" font-size="12.5" text-anchor="middle" fill="#6e6e6e">count what it costs.</text>
+<circle cx="310" cy="186" r="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.4"><animate attributeName="stroke" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.201;0.205;0.345;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<circle cx="310" cy="186" r="2" fill="#3a3a3a"><animate attributeName="fill" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.201;0.205;0.345;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<text x="310" y="224" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle" xml:space="preserve"><tspan fill="#c1121f">02  </tspan><tspan fill="#f3f3f3">SPEC</tspan></text>
+<text x="310" y="254" font-size="12.5" text-anchor="middle" fill="#949494">numbered requirements.</text>
+<text x="310" y="274" font-size="12.5" text-anchor="middle" fill="#949494">expected behavior.</text>
+<text x="310" y="294" font-size="12.5" text-anchor="middle" fill="#6e6e6e">what must never happen.</text>
+<circle cx="500" cy="186" r="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.4"><animate attributeName="stroke" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.406;0.410;0.550;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<circle cx="500" cy="186" r="2" fill="#3a3a3a"><animate attributeName="fill" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.406;0.410;0.550;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<text x="500" y="224" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle" xml:space="preserve"><tspan fill="#c1121f">03  </tspan><tspan fill="#f3f3f3">BUILD</tspan></text>
+<text x="500" y="254" font-size="12.5" text-anchor="middle" fill="#949494">AI implements.</text>
+<text x="500" y="274" font-size="12.5" text-anchor="middle" fill="#949494">I direct, review and</text>
+<text x="500" y="294" font-size="12.5" text-anchor="middle" fill="#6e6e6e">question every choice.</text>
+<circle cx="690" cy="186" r="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.4"><animate attributeName="stroke" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.611;0.615;0.755;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<circle cx="690" cy="186" r="2" fill="#3a3a3a"><animate attributeName="fill" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.611;0.615;0.755;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<text x="690" y="224" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle" xml:space="preserve"><tspan fill="#c1121f">04  </tspan><tspan fill="#f3f3f3">BREAK</tspan></text>
+<text x="690" y="254" font-size="12.5" text-anchor="middle" fill="#949494">edge cases. bad input.</text>
+<text x="690" y="274" font-size="12.5" text-anchor="middle" fill="#949494">failure modes.</text>
+<text x="690" y="294" font-size="12.5" text-anchor="middle" fill="#6e6e6e">actual vs. intended.</text>
+<circle cx="880" cy="186" r="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.4"><animate attributeName="stroke" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.816;0.820;0.960;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<circle cx="880" cy="186" r="2" fill="#3a3a3a"><animate attributeName="fill" dur="6.5s" repeatCount="indefinite" keyTimes="0;0.816;0.820;0.960;1" values="#3a3a3a;#3a3a3a;#c1121f;#3a3a3a;#3a3a3a"/></circle>
+<text x="880" y="224" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle" xml:space="preserve"><tspan fill="#c1121f">05  </tspan><tspan fill="#f3f3f3">SHIP</tspan></text>
+<text x="880" y="254" font-size="12.5" text-anchor="middle" fill="#949494">human approval gates.</text>
+<text x="880" y="274" font-size="12.5" text-anchor="middle" fill="#949494">logs you can read.</text>
+<text x="880" y="294" font-size="12.5" text-anchor="middle" fill="#6e6e6e">hours saved, measured.</text>
+<circle r="3.2" fill="#c1121f" filter="url(#glow)"><animateMotion path="M120,186 H880" dur="6.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.82;1" calcMode="linear"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.82;0.86;1" dur="6.5s" repeatCount="indefinite"/></circle>
+<rect width="1000" height="334" fill="url(#vig)"/>
+<rect width="1000" height="334" filter="url(#grain)"/>
+</g>
+<rect x=".5" y=".5" width="999" height="333" rx="14" fill="none" stroke="#1d1d1d"/>
+</svg>
