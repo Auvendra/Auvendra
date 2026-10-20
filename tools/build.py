@@ -457,7 +457,6 @@ def method() -> None:
 
     # iterate loop: BREAK back to SPEC
     c.add(f'<path d="M{xs[3]},{y - 10} C{xs[3]},{y - 44} {xs[1]},{y - 44} {xs[1]},{y - 10}" fill="none" stroke="#3a3a3a" class="ants"/>',
-          f'<path d="M{xs[1] - 4},{y - 16} L{xs[1]},{y - 10} L{xs[1] + 4},{y - 16}" fill="none" stroke="#3a3a3a"/>',
           f'<rect x="{500 - 104}" y="{y - 45}" width="208" height="18" fill="{BG}"/>',
           c.text(500, y - 32, "↩ iterate until it holds", size=11.5, fill=MUTED, anchor="middle"))
 
