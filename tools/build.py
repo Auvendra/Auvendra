@@ -578,10 +578,6 @@ PROJECTS = [
          desc="A tribe's invite-only website: strats, clips, build templates, calculators "
               "and role sign-ups, with separate access for members, allies and admins.",
          key="LIVE", vals=["doomtribe.lol", "28 active users"], live=True),
-    dict(title="Transcript Exporter", kind="YOUTUBE TOOL",
-         desc="Paste a YouTube link and it copies the full captions to your clipboard, "
-              "with or without timestamps. It can also save them to a file.",
-         key="OUTPUT", vals=["clipboard · file"]),
     dict(title="OnlyUD", kind="REVIEW BUSINESS",
          desc="A software review business I ran myself. I tested products for user "
               "safety, wrote detailed reviews and ratings, and told developers what to fix.",
