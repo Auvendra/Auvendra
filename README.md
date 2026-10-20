@@ -52,7 +52,7 @@ If it keeps needing manual work, make it easier.
 ### › things I've worked on
 
 <p align="center">
-  <img src="assets/project-bot.svg" width="100%" alt="Doom Discord Bot: a Discord bot for our ARK tribe. It handles activity tracking, votes, timers, invites and roles, so nobody has to do those jobs by hand. I designed it, built it with AI and tested it.">
+  <img src="assets/project-bot.svg" width="100%" alt="Doom Discord Bot: a Discord bot for an ARK tribe. It handles activity tracking, votes, timers, invites and roles, so nobody has to do those jobs by hand. I designed it, built it with AI and tested it.">
 </p>
 
 <p align="center">

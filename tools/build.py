@@ -692,10 +692,10 @@ def onlyud_panel(c: Card) -> str:
 
 PROJECTS = [
     dict(name="bot", kind="DISCORD BOT", title="Doom Discord Bot", tagline="TRIBE ADMIN, ON AUTOPILOT",
-         desc="A Discord bot for our ARK tribe. Running a tribe comes with a lot of small, repetitive jobs: "
+         desc="A Discord bot for an ARK tribe. Running a tribe comes with a lot of small, repetitive jobs: "
               "keeping track of who's active, running votes, remembering timers, sending invites and "
               "sorting out roles. The bot does all of it, so nobody has to do it by hand anymore.",
-         facts=[("MY PART", "designed · built with AI · tested"), ("FOR", "our ARK tribe")],
+         facts=[("MY PART", "designed · built with AI · tested"), ("FOR", "an ARK tribe")],
          panel=bot_panel),
     dict(name="doomtribe", kind="WEBSITE", title="Doomtribe", tagline="THE WHOLE TRIBE, ONE PLACE",
          desc="Our tribe's website, and it's invite-only. Strats, clips, build templates, calculators and "
