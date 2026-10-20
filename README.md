@@ -52,17 +52,5 @@ If it keeps needing manual work, make it easier.
 ### › things I've worked on
 
 <p align="center">
-  <img src="assets/project-bot.svg" width="100%" alt="Doom Discord Bot: a Discord bot for an ARK tribe. It handles activity tracking, votes, timers, invites and roles, so nobody has to do those jobs by hand. I designed it, built it with AI and tested it.">
-</p>
-
-<p align="center">
-  <a href="https://doomtribe.lol"><img src="assets/project-doomtribe.svg" width="100%" alt="Doomtribe, live at doomtribe.lol: a tribe's invite-only website. Strats, clips, build templates, calculators and role sign-ups in one place, with separate access for members, allies and admins. I designed it, built it with AI and tested it."></a>
-</p>
-
-<p align="center">
-  <img src="assets/project-transcript.svg" width="100%" alt="YouTube Transcript Exporter: paste a YouTube link and it copies the video's full captions to your clipboard, with or without timestamps, and can save them to a file. I designed it, built it with AI and tested it.">
-</p>
-
-<p align="center">
-  <img src="assets/project-onlyud.svg" width="100%" alt="OnlyUD: a Discord server I owned and ran on my own, with no admins. Around 3,000 real users and $2,500 earned before it closed down. Community management, support, feature requests, testing and bug reports all came to me.">
+  <img src="assets/projects.svg" width="100%" alt="Projects. Doom Discord Bot: a Discord bot for an ARK tribe that tracks activity, runs votes and timers, and handles invites and roles. Doomtribe, live at doomtribe.lol: a tribe's invite-only website with strats, clips, build templates, calculators and role sign-ups, and separate access for members, allies and admins. YouTube Transcript Exporter: copies a video's full captions to the clipboard, with or without timestamps, and can save them to a file. OnlyUD: a software review business I ran myself, testing products for user safety, writing detailed reviews and ratings and telling developers what to fix. 3,000 users and $2,500 earned before it closed.">
 </p>

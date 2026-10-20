@@ -565,187 +565,50 @@ def divider() -> None:
     print("assets/divider.svg")
 
 
-# ── project cards ─────────────────────────────────────────────────────────────
-# Same frame for every project: number, title and write-up on the left, a
-# panel on the right that shows what the thing actually does.
-
-PH = 380                       # project card height
-PX, PY, PW = 624, 40, 320      # right-hand panel
-PHH = PH - 2 * PY
-SUB = "#0d0d0d"                # panel fill, a step up from the card
-
-
-def lit(attr, i, n, *, off, on=RED, dur=7.0, hold=0.14) -> str:
-    """SMIL colour change that lights item i of n in turn, then hands on."""
-    t = i / n
-    if t == 0:
-        kt, vals = f"0;{hold};1", f"{on};{off};{off}"
-    else:
-        kt = f"0;{t - .004:.3f};{t:.3f};{min(t + hold, 1):.3f}" + (";1" if t + hold < 1 else "")
-        vals = f"{off};{off};{on};{off}" + (f";{off}" if t + hold < 1 else "")
-    return (f'<animate attributeName="{attr}" dur="{dur}s" repeatCount="indefinite" '
-            f'keyTimes="{kt}" values="{vals}"/>')
-
-
-def pill(c: Card, x, y, s, *, size=11.5, fill=MID, stroke=RAIL, pad=10, h=24) -> tuple[str, float]:
-    w = len(s) * size * ADV + 2 * pad
-    return (f'<rect x="{x}" y="{y}" width="{w:.1f}" height="{h}" rx="{h / 2}" fill="{SUB}" stroke="{stroke}"/>'
-            + c.text(x + pad, y + h / 2 + size * 0.36, s, size=size, fill=fill)), w
-
-
-def panel_head(c: Card, s: str) -> str:
-    return c.text(PX + 24, PY + 32, s, size=10.5, fill=MUTED, weight=700, spacing=2.4)
-
-
-def bot_panel(c: Card) -> str:
-    jobs = [("activity", "who's active, who isn't"), ("votes", "tribe decisions"),
-            ("timers", "nothing gets forgotten"), ("invites", "bringing people in"),
-            ("roles", "the right access")]
-    out = [panel_head(c, "WHAT IT HANDLES")]
-    y0, step = PY + 76, 46
-    for i, (job, note) in enumerate(jobs):
-        y = y0 + i * step
-        if i:
-            out.append(f'<line x1="{PX + 24}" y1="{y - 27}" x2="{PX + PW - 24}" y2="{y - 27}" stroke="{LINE}"/>')
-        out.append(f'<circle cx="{PX + 28}" cy="{y - 4.5}" r="3.5" fill="#3a3a3a">{lit("fill", i, len(jobs), off="#3a3a3a")}</circle>'
-                   + c.text(PX + 44, y, job, size=14, fill=LIGHT)
-                   + c.text(PX + PW - 24, y, note, size=12, fill=MUTED, anchor="end"))
-    return "".join(out)
-
-
-def site_panel(c: Card) -> str:
-    out = [f'<line x1="{PX}" y1="{PY + 32}" x2="{PX + PW}" y2="{PY + 32}" stroke="{LINE}"/>']
-    out += [f'<circle cx="{PX + 18 + k * 12}" cy="{PY + 16}" r="3.5" fill="#2f2f2f"/>' for k in range(3)]
-    out.append(f'<rect x="{PX + 66}" y="{PY + 7}" width="{PW - 82}" height="18" rx="9" fill="{BG}" stroke="{LINE}"/>'
-               + c.text(PX + 80, PY + 20, "doomtribe.lol", size=11.5, fill=MID))
-    out.append(c.text(PX + 24, PY + 62, "SECTIONS", size=10.5, fill=MUTED, weight=700, spacing=2.4))
-    tiles = ["strats", "clips", "build templates", "calculators", "role sign-ups"]
-    tw, th = (PW - 48 - 10) / 2, 36
-    for i, name in enumerate(tiles):
-        tx, ty = PX + 24 + (i % 2) * (tw + 10), PY + 78 + (i // 2) * (th + 10)
-        out.append(f'<rect x="{tx:.1f}" y="{ty}" width="{tw:.1f}" height="{th}" rx="6" fill="{BG}" stroke="{RAIL}">'
-                   f'{lit("stroke", i, len(tiles), off=RAIL, dur=6.0)}</rect>'
-                   + c.text(tx + 12, ty + 22.5, name, size=12, fill=LIGHT))
-    lock = PX + 24 + tw + 10, PY + 78 + 2 * (th + 10)
-    out.append(f'<rect x="{lock[0]:.1f}" y="{lock[1]}" width="{tw:.1f}" height="{th}" rx="6" fill="none" stroke="{RAIL}" class="ants"/>'
-               + c.text(lock[0] + 12, lock[1] + 22.5, "invite only", size=12, fill=MUTED))
-    out.append(c.text(PX + 24, PY + 244, "WHO GETS IN", size=10.5, fill=MUTED, weight=700, spacing=2.4))
-    x = PX + 24
-    for tier in ["ally", "member", "admin"]:
-        p, w = pill(c, x, PY + 258, tier, stroke=RED if tier == "admin" else RAIL,
-                    fill=LIGHT if tier == "admin" else MID)
-        out.append(p)
-        x += w + 8
-    return "".join(out)
-
-
-def transcript_panel(c: Card) -> str:
-    out = [panel_head(c, "HOW IT WORKS")]
-    x0, x1 = PX + 24, PX + PW - 24
-    # the link going in
-    out.append(f'<rect x="{x0}" y="{PY + 48}" width="{x1 - x0}" height="30" rx="6" fill="{BG}" stroke="{RAIL}"/>'
-               f'<rect x="{x0 + 12}" y="{PY + 56.5}" width="20" height="14" rx="4" fill="{RED}"/>'
-               f'<path d="M{x0 + 19.5},{PY + 60} l6,3.5 l-6,3.5z" fill="{WHITE}"/>'
-               + c.text(x0 + 42, PY + 67.5, "youtube.com/watch?v=…", size=12, fill=MID))
-    out.append(f'<line x1="{(x0 + x1) / 2}" y1="{PY + 82}" x2="{(x0 + x1) / 2}" y2="{PY + 102}" stroke="#3a3a3a" class="ants"/>')
-    # the captions coming out, with timestamps switching on and off
-    by, dur = PY + 106, 6
-    kt = "0;.42;.5;.92;1"
-    out.append(f'<rect x="{x0}" y="{by}" width="{x1 - x0}" height="122" rx="6" fill="{BG}" stroke="{RAIL}"/>'
-               + c.text(x0 + 14, by + 24, "timestamps", size=11.5, fill=MUTED)
-               + f'<g>{c.text(x1 - 54, by + 24, "on", size=11.5, fill=LIGHT, anchor="end")}'
-               f'<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></g>'
-               + f'<g opacity="0">{c.text(x1 - 54, by + 24, "off", size=11.5, fill=MUTED, anchor="end")}'
-               f'<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></g>'
-               f'<rect x="{x1 - 46}" y="{by + 12}" width="32" height="16" rx="8" fill="{RED}">'
-               f'<animate attributeName="fill" values="{RED};{RED};{RAIL};{RAIL};{RED}" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></rect>'
-               f'<circle cx="{x1 - 22}" cy="{by + 20}" r="5.5" fill="{WHITE}">'
-               f'<animate attributeName="cx" values="{x1 - 22};{x1 - 22};{x1 - 38};{x1 - 38};{x1 - 22}" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></circle>'
-               f'<line x1="{x0 + 14}" y1="{by + 38}" x2="{x1 - 14}" y2="{by + 38}" stroke="{LINE}"/>')
-    stamps, bars = ["0:04", "0:11", "0:19", "0:26"], [196, 150, 182, 108]
-    ts = "".join(c.text(x0 + 14, by + 60 + k * 18, s, size=11, fill=RED) for k, s in enumerate(stamps))
-    lines = "".join(f'<rect x="{x0 + 54}" y="{by + 55 + k * 18}" width="{w}" height="6" rx="3" fill="#3a3a3a"/>'
-                    for k, w in enumerate(bars))
-    out.append(f'<g>{ts}<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></g>'
-               f'<g>{lines}<animateTransform attributeName="transform" type="translate" values="0 0;0 0;-40 0;-40 0;0 0" '
-               f'keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite"/></g>')
-    # where it goes
-    x = x0
-    for s in ["→ clipboard", "→ save to file"]:
-        p, w = pill(c, x, PY + 244, s)
-        out.append(p)
-        x += w + 8
-    return "".join(out)
-
-
-def onlyud_panel(c: Card) -> str:
-    stats = [("3,000", "REAL USERS"), ("$2,500", "EARNED"), ("1", "PERSON RUNNING IT")]
-    out = [panel_head(c, "BY THE NUMBERS")]
-    for i, (num, what) in enumerate(stats):
-        y = PY + 98 + i * 76
-        if i:
-            out.append(f'<line x1="{PX + 24}" y1="{y - 54}" x2="{PX + PW - 24}" y2="{y - 54}" stroke="{LINE}"/>')
-        out.append(c.text(PX + 22, y, num, size=44, fill=WHITE, weight=200, cls="up", style=f"animation-delay:{.6 + i * .15:.2f}s")
-                   + c.text(PX + PW - 24, y - 6, what, size=10.5, fill=MID, weight=700, spacing=2, anchor="end"))
-    return "".join(out)
-
+# ── projects ──────────────────────────────────────────────────────────────────
+# One quiet list: number, name and kind on the left, a short write-up in the
+# middle, one fact on the right.
 
 PROJECTS = [
-    dict(name="bot", kind="DISCORD BOT", title="Doom Discord Bot", tagline="TRIBE ADMIN, ON AUTOPILOT",
-         desc="A Discord bot for an ARK tribe. Running a tribe comes with a lot of small, repetitive jobs: "
-              "keeping track of who's active, running votes, remembering timers, sending invites and "
-              "sorting out roles. The bot does all of it, so nobody has to do it by hand anymore.",
-         facts=[("MY PART", "designed · built with AI · tested"), ("FOR", "an ARK tribe")],
-         panel=bot_panel),
-    dict(name="doomtribe", kind="WEBSITE", title="Doomtribe", tagline="THE WHOLE TRIBE, ONE PLACE",
-         desc="A tribe's website, and it's invite-only. Strats, clips, build templates, calculators and "
-              "role sign-ups all live in one place instead of getting lost in Discord. Members, allies "
-              "and admins each get their own level of access, so everyone sees what they need.",
-         facts=[("MY PART", "designed · built with AI · tested"), ("LIVE", "doomtribe.lol ↗")],
-         panel=site_panel),
-    dict(name="transcript", kind="YOUTUBE TOOL", title="Transcript Exporter", tagline="CAPTIONS IN ONE PASTE",
-         desc="Paste a YouTube link and it pulls the video's full captions and copies them straight to "
-              "your clipboard. Keep the timestamps to find a moment again, or drop them for clean text. "
-              "You can save it to a file too. Handy for notes, quotes or handing a long video to an AI.",
-         facts=[("MY PART", "designed · built with AI · tested"), ("OUTPUT", "clipboard · file")],
-         panel=transcript_panel),
-    dict(name="onlyud", kind="DISCORD COMMUNITY", title="OnlyUD", tagline="3,000 REAL USERS. RUN SOLO.",
-         desc="A Discord server I owned and ran completely on my own. It grew to around 3,000 real users "
-              "and earned $2,500 before it closed down. With no admins, everything came straight to me: "
-              "community management, support, feature requests, testing and bug reports.",
-         facts=[("MY PART", "owner · solo, no admins"), ("STATUS", "closed down")],
-         panel=onlyud_panel),
+    dict(title="Doom Discord Bot", kind="DISCORD BOT",
+         desc="A Discord bot for an ARK tribe. It tracks activity, runs votes and timers, "
+              "and handles invites and roles, so none of it has to be done by hand.",
+         key="FOR", vals=["an ARK tribe"]),
+    dict(title="Doomtribe", kind="WEBSITE",
+         desc="A tribe's invite-only website: strats, clips, build templates, calculators "
+              "and role sign-ups, with separate access for members, allies and admins.",
+         key="LIVE", vals=["doomtribe.lol"]),
+    dict(title="Transcript Exporter", kind="YOUTUBE TOOL",
+         desc="Paste a YouTube link and it copies the full captions to your clipboard, "
+              "with or without timestamps. It can also save them to a file.",
+         key="OUTPUT", vals=["clipboard · file"]),
+    dict(title="OnlyUD", kind="REVIEW BUSINESS",
+         desc="A software review business I ran myself. I tested products for user "
+              "safety, wrote detailed reviews and ratings, and told developers what to fix.",
+         key="BEFORE IT CLOSED", vals=["3,000 users", "$2,500 earned"]),
 ]
 
 
 def projects() -> None:
-    col = 58  # characters per write-up line: (584 - 56) / (14.5 * ADV), with a little slack
-    for i, p in enumerate(PROJECTS, 1):
-        c = Card(f"project-{p['name']}", PH, p["title"], f"{p['title']}: {p['desc']}")
-        d = lambda s: f"animation-delay:{s}s"  # noqa: E731
-        lines = textwrap.wrap(p["desc"], col)
-        if len(lines) > 5:
-            raise SystemExit(f"{p['name']}: write-up runs to {len(lines)} lines, the card fits 5")
-
-        c.add(c.label(56, 64, f"{i:02d} · {p['kind']}", cls="up", style=d(.1)),
-              c.text(54, 120, p["title"], size=36, fill=WHITE, weight=200, spacing=2, cls="up", style=d(.25)),
-              f'<rect x="56" y="142" width="34" height="2" fill="{RED}" class="up" style="{d(.4)}"/>',
-              c.text(104, 148, p["tagline"], size=12, fill=MID, weight=700, spacing=2, cls="up", style=d(.4)))
-        for j, ln in enumerate(lines):
-            c.add(c.text(56, 190 + j * 23, ln, size=14.5, fill=LIGHT, cls="up", style=d(.5 + j * .05)))
-        c.add(f'<line x1="56" y1="306" x2="584" y2="306" stroke="{LINE}" class="up" style="{d(.7)}"/>')
-        x = 56
-        for k, v in p["facts"]:
-            c.add(f'<g class="up" style="{d(.8)}">'
-                  + c.text(x, 330, k, size=10.5, fill=MUTED, weight=700, spacing=2.4)
-                  + c.text(x, 352, v, size=13.5, fill=LIGHT) + "</g>")
-            x += max(len(k) * (10.5 * ADV + 2.4), len(v) * 13.5 * ADV) + 40
-
-        c.add(f'<g class="up" style="{d(.3)}">'
-              f'<rect x="{PX}" y="{PY}" width="{PW}" height="{PHH}" rx="10" fill="{SUB}" stroke="{LINE}"/>'
-              + p["panel"](c) + "</g>")
-        c.save()
-
+    top, row = 92, 112
+    c = Card("projects", top + row * len(PROJECTS), "Things I've worked on",
+             "Things I've worked on. " + " ".join(f"{p['title']}: {p['desc']}" for p in PROJECTS))
+    c.add(c.label(56, 64, "PROJECTS"),
+          c.text(944, 64, "what I've built and run", size=12, fill=MUTED, anchor="end"))
+    for i, p in enumerate(PROJECTS):
+        t = top + i * row
+        lines = textwrap.wrap(p["desc"], 51)  # (760 - 340) / (13.5 * ADV)
+        if len(lines) > 3:
+            raise SystemExit(f"{p['title']}: write-up runs to {len(lines)} lines, a row fits 3")
+        g = [f'<line x1="56" y1="{t}" x2="944" y2="{t}" stroke="{LINE}"/>',
+             c.text(56, t + 41, f"{i + 1:02d}", size=12, fill=RED, weight=700, spacing=1),
+             c.text(96, t + 41, p["title"], size=17, fill=WHITE),
+             c.text(96, t + 64, p["kind"], size=10, fill=MUTED, weight=700, spacing=2)]
+        g += [c.text(340, t + 41 + j * 21, ln, size=13.5, fill=MID) for j, ln in enumerate(lines)]
+        g.append(c.text(944, t + 38, p["key"], size=10, fill=MUTED, weight=700, spacing=2, anchor="end"))
+        g += [c.text(944, t + 62 + j * 21, v, size=13.5, fill=LIGHT, anchor="end") for j, v in enumerate(p["vals"])]
+        c.add(f'<g class="up" style="animation-delay:{.15 + i * .12:.2f}s">' + "".join(g) + "</g>")
+    c.save()
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
