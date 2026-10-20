@@ -577,7 +577,7 @@ PROJECTS = [
     dict(title="Doomtribe", kind="WEBSITE",
          desc="A tribe's invite-only website: strats, clips, build templates, calculators "
               "and role sign-ups, with separate access for members, allies and admins.",
-         key="LIVE", vals=["doomtribe.lol"]),
+         key="LIVE", vals=["doomtribe.lol", "28 active users"], live=True),
     dict(title="Transcript Exporter", kind="YOUTUBE TOOL",
          desc="Paste a YouTube link and it copies the full captions to your clipboard, "
               "with or without timestamps. It can also save them to a file.",
@@ -606,6 +606,8 @@ def projects() -> None:
              c.text(96, t + 64, p["kind"], size=10, fill=MUTED, weight=700, spacing=2)]
         g += [c.text(340, t + 41 + j * 21, ln, size=13.5, fill=MID) for j, ln in enumerate(lines)]
         g.append(c.text(944, t + 38, p["key"], size=10, fill=MUTED, weight=700, spacing=2, anchor="end"))
+        if p.get("live"):
+            g.append(pulse(944 - len(p["key"]) * (10 * ADV + 2) - 14, t + 34.5, r=3))
         g += [c.text(944, t + 62 + j * 21, v, size=13.5, fill=LIGHT, anchor="end") for j, v in enumerate(p["vals"])]
         c.add(f'<g class="up" style="animation-delay:{.15 + i * .12:.2f}s">' + "".join(g) + "</g>")
     c.save()
