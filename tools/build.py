@@ -486,62 +486,24 @@ def method() -> None:
     c.save()
 
 
-def trajectory() -> None:
-    stages = [
-        ("00", "AI-DIRECTED BUILD", "specs · testing · iteration with Claude Code", "ACTIVE"),
-        ("01", "FOUNDATIONS", "Python · SQL · REST APIs / JSON · Git", "LEARNING"),
-        ("02", "ORCHESTRATION", "n8n · Power Automate", "NEXT"),
-        ("03", "INFRASTRUCTURE", "Docker · Azure", "QUEUED"),
-        ("04", "APPLIED AI", "LLM tool-calling · RAG · human-in-the-loop", "QUEUED"),
-        ("05", "LEGACY BRIDGE", "UiPath — only where no API exists", "QUEUED"),
-        ("06", "BUSINESS VALUE", "process analysis · ROI in hours and euros", "QUEUED"),
-    ]
+def roles() -> None:
     roles = [("Automation", "Engineer"), ("Integration", "Engineer"), ("Applied AI", "Engineer"),
              ("Forward-Deployed", "/ Solutions Eng."), ("Solutions", "Architect")]
-    c = Card("trajectory", 624, "Trajectory",
-             "Learning path, in order: " + "; ".join(f"{s[1].title()} ({s[2]}): {s[3].lower()}" for s in stages)
-             + ". Target roles: " + ", then ".join(" ".join(r) for r in roles) + ".")
-    c.add(c.label(56, 64, "TRAJECTORY"),
-          c.text(944, 64, "honest status · 2026.10", size=12, fill=MUTED, anchor="end"),
-          c.text(54, 108, "Where I’m going, in order.", size=21, fill=WHITE, weight=200))
-
-    rail_x, y0, step = 72, 164, 40
-    y_last = y0 + step * (len(stages) - 1)
-    c.css.append(f".grow{{stroke-dasharray:{step};stroke-dashoffset:{step};animation:grow 1.4s .6s cubic-bezier(.3,.7,.2,1) forwards}}"
-                 "@keyframes grow{to{stroke-dashoffset:0}}")
-    c.add(f'<line x1="{rail_x}" y1="{y0}" x2="{rail_x}" y2="{y_last}" stroke="{RAIL}"/>',
-          f'<line x1="{rail_x}" y1="{y0}" x2="{rail_x}" y2="{y0 + step}" stroke="{RED}" stroke-width="1.4" class="grow"/>')
-    tone = {"ACTIVE": (WHITE, LIGHT, RED), "LEARNING": (WHITE, LIGHT, LIGHT),
-            "NEXT": (LIGHT, MID, MID), "QUEUED": (MID, MUTED, DIM)}
-    for i, (num, name, tools, status) in enumerate(stages):
-        y = y0 + i * step
-        title_c, tools_c, status_c = tone[status]
-        if status == "ACTIVE":
-            node = pulse(rail_x, y, r=4)
-        elif status == "LEARNING":
-            node = f'<circle cx="{rail_x}" cy="{y}" r="4.5" fill="{BG}" stroke="{RED}" stroke-width="1.4"/>'
-        else:
-            node = f'<circle cx="{rail_x}" cy="{y}" r="4.5" fill="{BG}" stroke="{"#5a5a5a" if status == "NEXT" else "#363636"}" stroke-width="1.4"/>'
-        c.add(f'<g class="up" style="animation-delay:{.15 + i * .07:.2f}s">' + node
-              + c.text(98, y + 4.5, num, size=12, fill=DIM)
-              + c.text(134, y + 4.5, name, size=13, fill=title_c, weight=700, spacing=1.5)
-              + c.text(364, y + 5, tools, size=14, fill=tools_c)
-              + c.text(944, y + 4.5, status, size=11, fill=status_c, weight=700, spacing=2.4, anchor="end")
-              + "</g>")
-
-    sep = y_last + 46
-    c.add(f'<line x1="56" y1="{sep}" x2="944" y2="{sep}" stroke="{LINE}"/>',
-          c.label(56, sep + 42, "TARGET ROLES"))
-    xs, ry = [120, 310, 500, 690, 880], sep + 84
+    c = Card("roles", 212, "Target roles",
+             "Target roles: " + ", then ".join(" ".join(r) for r in roles) + ".")
+    c.add(c.label(56, 64, "TARGET ROLES"))
+    xs, ry = [120, 310, 500, 690, 880], 120
     c.add(f'<line x1="{xs[0]}" y1="{ry}" x2="{xs[-1]}" y2="{ry}" stroke="{RAIL}"/>')
     for i, (x, (a, b)) in enumerate(zip(xs, roles)):
         last = i == len(xs) - 1
         if i:
             c.add(f'<path d="M{x - 99},{ry - 4} L{x - 95},{ry} L{x - 99},{ry + 4}" fill="none" stroke="#3e3e3e"/>')
-        c.add(pulse(x, ry, r=4.5) if last else
-              f'<circle cx="{x}" cy="{ry}" r="4.5" fill="{BG}" stroke="#4a4a4a" stroke-width="1.4"/>',
-              c.text(x, ry + 34, a, size=13.5, fill=WHITE if last else LIGHT, weight=700 if last else 400, anchor="middle"),
-              c.text(x, ry + 54, b, size=13.5, fill=LIGHT if last else MUTED, anchor="middle"))
+        c.add(f'<g class="up" style="animation-delay:{.15 + i * .1:.2f}s">'
+              + (pulse(x, ry, r=4.5) if last else
+                 f'<circle cx="{x}" cy="{ry}" r="4.5" fill="{BG}" stroke="#4a4a4a" stroke-width="1.4"/>')
+              + c.text(x, ry + 34, a, size=13.5, fill=WHITE if last else LIGHT, weight=700 if last else 400, anchor="middle")
+              + c.text(x, ry + 54, b, size=13.5, fill=LIGHT if last else MUTED, anchor="middle")
+              + "</g>")
     c.save()
 
 
@@ -589,5 +551,5 @@ if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     hero()
     method()
-    trajectory()
+    roles()
     footer()

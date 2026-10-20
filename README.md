@@ -4,11 +4,11 @@
 
 ### › whoami
 
-Most work inside a company isn't hard, it's repetitive: copying data between screens, chasing approvals, rebuilding the same report every Monday. I want to be the person who makes that work disappear.
+I like fixing the boring parts of how a business runs. A lot of office work is people copying data from one system to another or putting together the same report every week, and most of it can be automated.
 
-I design how a system should behave: numbered requirements, expected interactions, the edge cases nobody wrote down. Then I direct AI through the build and test every version until it does exactly that. The road ahead is **AI automation and integration engineering**: Python, APIs and databases, orchestrated with n8n and LLM agents, with a human approval wherever a mistake would cost money.
+What I'm good at is working out how a system should behave. I write down exactly what it needs to do, then test it and keep correcting it until it actually works that way. I build with AI tools, so the AI writes most of the code while I handle the requirements, testing and fixes. I'm learning Python, SQL and APIs so I can read and judge that code myself.
 
-**How I build, plainly:** AI writes most of my code. My job is knowing what it should do, proving when it doesn't, and making it explain the decisions that matter. I'm learning the fundamentals so I can judge every line it hands me.
+I'm aiming for a job in automation and integration, working with tools like n8n and AI agents.
 
 <br>
 
@@ -29,7 +29,7 @@ SPEAK IN EUROS          Hours saved and errors avoided, not "AI-powered".
 <br>
 
 <p align="center">
-  <img src="assets/trajectory.svg" width="100%" alt="Trajectory, in order. 00 AI-directed build with Claude Code: active. 01 Foundations, Python, SQL, REST APIs and JSON, Git: learning. 02 Orchestration, n8n and Power Automate: next. 03 Infrastructure, Docker and Azure. 04 Applied AI, LLM tool-calling, RAG, human-in-the-loop. 05 Legacy bridge, UiPath only where no API exists. 06 Business value, process analysis and ROI. Target roles: Automation Engineer, Integration Engineer, Applied AI Engineer, Forward-Deployed or Solutions Engineer, then Solutions Architect.">
+  <img src="assets/roles.svg" width="100%" alt="Target roles: Automation Engineer, Integration Engineer, Applied AI Engineer, Forward-Deployed or Solutions Engineer, then Solutions Architect.">
 </p>
 
 ### › contact
@@ -45,9 +45,4 @@ SPEAK IN EUROS          Hours saved and errors avoided, not "AI-powered".
 
 <p align="center">
   <img src="assets/mikasa.svg" width="100%" alt="Mikasa Ackerman in her red scarf, a black-and-white manga portrait dissolving into ASCII, beside her line: This world is cruel. It's also very beautiful.">
-</p>
-
-<p align="center">
-  <sub>This profile is its own case study: I set the brief and the bar, AI wrote <a href="tools/build.py">the generator</a> that builds each card.<br>
-  Mikasa Ackerman from <i>Attack on Titan</i> © Hajime Isayama / Kodansha. Type set in JetBrains Mono (OFL).</sub>
 </p>
