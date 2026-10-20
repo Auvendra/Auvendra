@@ -51,22 +51,18 @@ If it keeps needing manual work, make it easier.
 
 ### › things I've worked on
 
-#### <img src="assets/icon-bot.svg" width="24" height="24" alt=""> Doom Discord Bot
+<p align="center">
+  <img src="assets/project-bot.svg" width="100%" alt="Doom Discord Bot: a Discord bot for our ARK tribe. It handles activity tracking, votes, timers, invites and roles, so nobody has to do those jobs by hand. I designed it, built it with AI and tested it.">
+</p>
 
-A bot for our ARK tribe. It tracks activity, runs votes and timers, handles invites and roles, and saves us doing it all by hand.
+<p align="center">
+  <a href="https://doomtribe.lol"><img src="assets/project-doomtribe.svg" width="100%" alt="Doomtribe, live at doomtribe.lol: our tribe's invite-only website. Strats, clips, build templates, calculators and role sign-ups in one place, with separate access for members, allies and admins. I designed it, built it with AI and tested it."></a>
+</p>
 
-#### <img src="assets/icon-website.svg" width="24" height="24" alt=""> [Doomtribe · doomtribe.lol](https://doomtribe.lol)
+<p align="center">
+  <img src="assets/project-transcript.svg" width="100%" alt="YouTube Transcript Exporter: paste a YouTube link and it copies the video's full captions to your clipboard, with or without timestamps, and can save them to a file. I designed it, built it with AI and tested it.">
+</p>
 
-Our tribe's website. Strats, clips, build templates, calculators and role sign-ups in one place, with different access for members, allies and admins.
-
-#### <img src="assets/icon-transcript.svg" width="24" height="24" alt=""> YouTube Transcript Exporter
-
-Paste a YouTube link and it copies the full captions to your clipboard. You can keep the timestamps or leave them out, and save the text to a file.
-
-#### <img src="assets/icon-math.svg" width="24" height="24" alt=""> [Mafs :3](https://github.com/Auvendra/CodeAcademy/blob/main/Exam.py)
-
-A little Python/PyQt5 math game from my CodeAcademy work. Random addition and multiplication questions, feedback on your answers and five chances to reveal an answer if you get stuck.
-
-#### <img src="assets/icon-community.svg" width="24" height="24" alt=""> OnlyUD
-
-I owned and ran it on my own, with no admins. Community management, support, feature requests, testing and bug reports all came to me.
+<p align="center">
+  <img src="assets/project-onlyud.svg" width="100%" alt="OnlyUD: a Discord server I owned and ran on my own, with no admins. Around 3,000 real users and $2,500 earned before it closed down. Community management, support, feature requests, testing and bug reports all came to me.">
+</p>
